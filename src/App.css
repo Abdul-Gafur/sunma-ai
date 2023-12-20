@@ -1,0 +1,130 @@
+.main-nav{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid;
+  border-color:#3d6cb9;
+  height: 80px;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  position: fixed;
+  background-color: #fafaf6;
+}
+
+.main-nav > h3 #ai, .footer-main >p #ai{
+  color: #3d6cb9;
+}
+
+.main-nav > h3, .footer-main > p #su{
+  color:#00b1ff;
+  margin-top: 25px;
+}
+
+a button{
+  color:white;
+  background-color: #3d6cb9;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-items{
+  margin-top: 21px;
+}
+.nav-items > a{
+  padding: 0px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* MAIN DIV CONTAINER */
+
+.main-div{
+  width: 80%;
+  margin: 160px auto;
+  background-color: rgba(167, 244, 238, 0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-text{
+width: 25%;
+margin: 30px auto;
+}
+
+.hero-text > h1{
+font-size: 3.0rem;
+  }
+
+.hero-image > img{
+  width: 70%;
+  margin: 30px 40px;
+}
+
+.features-main{
+  margin-top: 8%;
+}
+.features-div{
+ margin: 5px auto;
+ width: 70%;
+ text-align: center;
+}
+.features-div > h2{
+  font-size: 2.3rem;
+}
+.features-div > h5{
+  font-size: 1.3rem;
+  width: 57%;
+ margin: -20px auto;
+}
+
+.section-div{
+  width: 80%;
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card{
+  margin: 0 10px;
+border:1px solid #3d6cb9;
+width: 30%;
+box-sizing: box;
+margin-bottom: 10px;
+border-radius: 10px;
+cursor: pointer;
+}
+.card:hover{
+  box-shadow: 0 0 3px 1.2px black;
+}
+.card > .card-title{
+background-color: rgba(167, 244, 238, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.card > .card-body{
+  font-size: 1.2rem;
+  text-align: center;
+}
+.card > .card-footer{
+  font-size: 1.0rem;
+  text-align: center;
+  padding: 5px;
+}
+
+.footer-main{
+    background-color: #ecece1;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  
+  };
+
