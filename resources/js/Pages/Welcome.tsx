@@ -5,6 +5,12 @@ import { Button } from "@/Components/ui/button";
 import Modal from "@/Components/modal";
 import { useState } from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGear } from '@fortawesome/free-solid-svg-icons';
+import { faMicrochip } from '@fortawesome/free-solid-svg-icons';
+import { faTerminal } from '@fortawesome/free-solid-svg-icons';
+import { faBug } from '@fortawesome/free-solid-svg-icons';
+
 export default function Welcome({
     auth,
     laravelVersion,
@@ -14,83 +20,75 @@ export default function Welcome({
     return (
         <>
             <Head title="Welcome" />
-            <div className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-square bg-center bg-white dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-                <div className="top-0 inset-x-0 absolute bg-gradient-to-b from-white to-white/0">
-                    <div className="flex justify-between container mx-auto p-4">
-                        <div>
-                            <p className="font-extrabold tracking-wide text-black">
-                                PDFPINTAR
-                            </p>
+            {/* <div className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-square bg-center bg-white dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white"> */}
+                <nav>
+                    <div className="main-nav">
+                        <h3>Sunma<span id="ai">AI</span></h3>
+                        <div className="nav-items">
+                            <a>Features</a>
+                            <a>Pricing</a>
+                            <a>FAQ</a>
+                            <a>AI of The Day</a>
+                            <a>Affiliates</a>
+                            <a href="/login"><button id="btn">Create ChatGPT Bot</button></a>
                         </div>
-                        <div>
-                            {auth.user ? (
-                                <Link
-                                    href={route("documents.index")}
-                                    className="font-medium text-sm text-gray-600 hover:text-gray-900 hover:underline dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-none"
-                                >
-                                    Documents
-                                </Link>
-                            ) : (
-                                <>
-                                    <Link
-                                        href={route("login")}
-                                        className="font-medium text-sm py-2 px-3 text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-none"
-                                    >
-                                        Log in
-                                    </Link>
 
-                                    <Link
-                                        href={route("register")}
-                                        className="font-medium text-sm ml-4 py-2 px-3 rounded-md text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-none"
-                                    >
-                                        Register
-                                    </Link>
-                                </>
-                            )}
-                        </div>
                     </div>
-                </div>
+                </nav>
 
-                <div className="max-w-7xl mx-auto p-6 lg:p-8">
-                    <div className="mt-[70px] max-w-3xl mx-auto pb-8 text-center">
-                        <h1 className="text-3xl font-bold text-gray-900 md:text-4xl xl:text-5xl xl:leading-tight">
-                            Effortless PDF Comprehension with AI-powered Chatbot
-                        </h1>
-                        <h2 className="mt-6 leading-snug text-gray-500 xl:mt-5 xl:text-xl">
-                            Discover a smarter way to read PDFs, where
-                            intelligent conversations unlock deeper
-                            comprehension and effectiveness in your reading
-                            journey.
-                        </h2>
-                        <div className="flex gap-4 py-8 justify-center items-center">
-                            <a href="/login">
-                                <Button>Get started now!</Button>
-                            </a>
-                            <div>
-                                <button
-                                    onClick={() => setDemoModalShown(true)}
-                                    className="hover:border-primary hover:text-gray-700 font-medium leading-6 text-gray-600 border-b-2"
-                                >
-                                    Watch Demo
-                                </button>
+                <div>
+                    <main className="main-div">
+                        <div className="hero-text">
+                            <h1>Custom AI Chatbot trained on your data</h1>
+                            <p>Create an AI chatbot powered by ChatGPT trained on your data and embed it on your website.</p>
+                            <a><button>Try ChatGPT Bot</button></a>
+                        </div>
+                        <div className="hero-image">
+                            <img src="/hero-image.webp"></img>
+                            <div className="hero-video">
+
                             </div>
                         </div>
-                    </div>
-                    <div className="mx-auto max-w-7xl">
-                        <img
-                            src="/screenshot.png"
-                            className="rounded-3xl shadow-2xl ring-[10px] ring-primary/30"
-                        />
+                    </main>
+                    <div className="features-main">
+                        <div className="features-div">
+                            <h2>Key Features</h2>
+                            <h5>This chatbot bot trained to answer questions about EmbedAI.
+                                Ask a question to get started.</h5>
+                        </div>
+                        <section className="section-div">
+                            <div className="card">
+                                <div className="card-title"><FontAwesomeIcon style={{ height: '40px', padding: '8px' }} icon={faGear} /></div>
+                                <div className="card-body"><h4>AI Chatbot powered by ChatGPT</h4></div>
+                                <div className="card-footer">Train on files, websites and even on YouTube with ChatGPT</div>
+                            </div>
+                            <div className="card">
+                                <div className="card-title"><FontAwesomeIcon style={{ height: '40px', padding: '8px' }} icon={faMicrochip} /></div>
+                                <div className="card-body"><h4>Customize look and feel</h4></div>
+                                <div className="card-footer">Use custom logos, colours and styling of your AI chatbot</div>
+                            </div>
+                            <div className="card">
+                                <div className="card-title"><FontAwesomeIcon style={{ height: '40px', padding: '8px' }} icon={faTerminal} /></div>
+                                <div className="card-body"><h4>Share your AI chatbot</h4></div>
+                                <div className="card-footer">Share chatbot as chat bubble, embed code or a link</div>
+                            </div>
+                            <div className="card">
+                                <div className="card-title"><FontAwesomeIcon style={{ height: '40px', padding: '8px' }} icon={faBug} /></div>
+                                <div className="card-body"><h4>A Multilingual chatbot</h4></div>
+                                <div className="card-footer">EmbedAI supports queries and responses in 100+ languages</div>
+                            </div>
+                        </section>
                     </div>
                 </div>
-            </div>
+
+            {/* </div> */}
 
             <footer className="bg-white">
                 <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
                     <div className="flex justify-center space-x-6 md:order-2">
                         <span className="inline-flex justify-center w-full gap-3 lg:ml-auto md:justify-start md:w-auto">
                             <a
-                                href="https://github.com/ahmadrosid"
+                                href="https://github.com/"
                                 className="w-6 h-6 transition fill-black hover:text-blue-500"
                             >
                                 <span className="sr-only">github</span>
@@ -100,7 +98,7 @@ export default function Welcome({
                                 />
                             </a>
                             <a
-                                href="https://twitter.com/_ahmadrosid"
+                                href="https://twitter.com/"
                                 className="w-6 h-6 transition fill-black hover:text-blue-500"
                             >
                                 <span className="sr-only">twitter</span>
@@ -110,7 +108,7 @@ export default function Welcome({
                                 />
                             </a>
                             <a
-                                href="https://linkedin.com/in/ahmadrosid"
+                                href="https://linkedin.com/"
                                 className="w-6 h-6 transition fill-black hover:text-blue-500"
                             >
                                 <span className="sr-only">Linkedin</span>
@@ -127,11 +125,11 @@ export default function Welcome({
                             <span className="mx-auto mt-2 text-sm text-gray-500">
                                 Copyright © 2023
                                 <a
-                                    href="https://ahmadrosid.com"
+                                    href="https://google.com"
                                     className="mx-2 text-blue-500 hover:underline"
                                     rel="noopener noreferrer"
                                 >
-                                    @ahmadrosid
+                                    @SunmaAi
                                 </a>
                             </span>
                         </p>
@@ -162,3 +160,4 @@ export default function Welcome({
         </>
     );
 }
+
