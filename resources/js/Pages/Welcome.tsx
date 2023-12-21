@@ -41,7 +41,7 @@ export default function Welcome({
                         <div className="hero-text">
                             <h1>Custom AI Chatbot trained on your data</h1>
                             <p>Create an AI chatbot powered by ChatGPT trained on your data and embed it on your website.</p>
-                            <a><button>Try ChatGPT Bot</button></a>
+                            <a href="/login"><button>Try ChatGPT Bot</button></a>
                         </div>
                         <div className="hero-image">
                             <img src="/hero-image.webp"></img>
